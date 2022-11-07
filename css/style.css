@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  font-family: "微軟正黑體";
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+select, input {
+  font-family: "微軟正黑體";
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #e3cc97;
+}
+html body {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  overflow: hidden;
+}
+html body main {
+  width: 100%;
+  height: 100%;
+}
+html body main article {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body main article .left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+html body main article .left .mainobjectL {
+  width: 828px;
+  height: 953px;
+  background: url(../images/mainObject_left.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  top: 38px;
+  right: 41px;
+  -webkit-animation: lag 0.2s 0.2s linear, l_side 0.6s 0.2s linear;
+          animation: lag 0.2s 0.2s linear, l_side 0.6s 0.2s linear;
+}
+html body main article .left .mainobjectL.shadow {
+  width: 828px;
+  height: 953px;
+  background: url(../images/mainObject_left.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  top: 38px;
+  right: 41px;
+  -webkit-animation: lag 0.2s 0.2s linear, l_side 0.6s 0.2s linear, gone 0.6s 0.8s ease-in-out;
+          animation: lag 0.2s 0.2s linear, l_side 0.6s 0.2s linear, gone 0.6s 0.8s ease-in-out;
+}
+html body main article .right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+html body main article .right .logo {
+  width: 538px;
+  height: 234px;
+  background: url("../images/logo.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 16px;
+  left: -314px;
+}
+html body main article .right .inputBox {
+  width: 456px;
+  height: 213px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 17px 42px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(12, 22, 56, 0.862745098);
+  border: 3px solid;
+  -o-border-image: linear-gradient(to top, #f0f0f0 0%, #8f8f8f 49%, #ffffff 50%, #e6e6e6 100%) 1;
+     border-image: -webkit-gradient(linear, left bottom, left top, from(#f0f0f0), color-stop(49%, #8f8f8f), color-stop(50%, #ffffff), to(#e6e6e6)) 1;
+     border-image: linear-gradient(to top, #f0f0f0 0%, #8f8f8f 49%, #ffffff 50%, #e6e6e6 100%) 1;
+  position: absolute;
+  top: 252px;
+  left: -277px;
+}
+html body main article .right .inputBox div label {
+  display: block;
+  width: 215px;
+  height: 46px;
+  margin: 0 0 10px 0;
+}
+html body main article .right .inputBox div label:nth-of-type(2) {
+  margin: 0 0 20px 0;
+}
+html body main article .right .inputBox div label input {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), color-stop(61%, #f9f9f9));
+  background: linear-gradient(to bottom, #e3e3e3 0%, #f9f9f9 61%);
+  border-radius: 5px;
+  border: solid 2px #ffffff;
+  color: #616169;
+  font-size: 20px;
+  padding: 17px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body main article .right .inputBox div label input::-webkit-input-placeholder {
+  color: #616169;
+}
+html body main article .right .inputBox div label input::-moz-placeholder {
+  color: #616169;
+}
+html body main article .right .inputBox div label input:-ms-input-placeholder {
+  color: #616169;
+}
+html body main article .right .inputBox div label input::-ms-input-placeholder {
+  color: #616169;
+}
+html body main article .right .inputBox div label input::placeholder {
+  color: #616169;
+}
+html body main article .right .inputBox button {
+  width: 125px;
+  height: 103px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, #e6203c), color-stop(50%, #9e0925), to(#e6203c));
+  background: linear-gradient(to top, #e6203c 2%, #9e0925 50%, #e6203c 100%);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.5019607843);
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  margin-left: 26px;
+  position: relative;
+  z-index: 3;
+  padding: 29px 0 29px 11px;
+}
+html body main article .right .inputBox button:hover, html body main article .right .inputBox button:active, html body main article .right .inputBox button.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#962649), to(#771c38));
+  background: linear-gradient(to top, #962649 0%, #771c38 100%);
+}
+html body main article .right .inputBox .buttonDeco {
+  width: 129px;
+  height: 107px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dadada), color-stop(30%, #999999), color-stop(50%, #ffffff), color-stop(76%, #999999), color-stop(93%, #dadada));
+  background: linear-gradient(to top, #dadada 0%, #999999 30%, #ffffff 50%, #999999 76%, #dadada 93%);
+  border-radius: 12px;
+  position: absolute;
+  top: 15px;
+  left: 281px;
+  z-index: 2;
+}
+html body main article .right .union {
+  width: 266px;
+  height: 47px;
+  background: url(../images/union.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 92px;
+}
+html body main article .right .mainobjectR {
+  width: 798px;
+  height: 941px;
+  background: url(../images/mainObject_right.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  top: 25px;
+  left: 7px;
+  z-index: -1;
+  -webkit-animation: lag 0.2s 0.2s linear, r_side 0.6s 0.2s linear;
+          animation: lag 0.2s 0.2s linear, r_side 0.6s 0.2s linear;
+}
+html body main article .right .mainobjectR.shadow {
+  width: 798px;
+  height: 941px;
+  background: url(../images/mainObject_right.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  top: 25px;
+  left: 7px;
+  z-index: -1;
+  -webkit-animation: lag 0.2s 0.2s linear, r_side 0.6s 0.2s linear, gone 0.6s 0.8s ease-in-out;
+          animation: lag 0.2s 0.2s linear, r_side 0.6s 0.2s linear, gone 0.6s 0.8s ease-in-out;
+}
+html body .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  background: url("../images/bg.png") no-repeat top center;
+  background-size: 100%;
+  z-index: -999;
+}
+
+@-webkit-keyframes r_side {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-300%);
+            transform: scale(0) translateX(-300%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
+  }
+}
+
+@keyframes r_side {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-300%);
+            transform: scale(0) translateX(-300%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
+  }
+}
+@-webkit-keyframes l_side {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(300%);
+            transform: scale(0) translateX(300%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
+  }
+}
+@keyframes l_side {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(300%);
+            transform: scale(0) translateX(300%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(0%);
+            transform: scale(1) translateX(0%);
+  }
+}
+@-webkit-keyframes gone {
+  0% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes gone {
+  0% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes lag {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes lag {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,
+center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: "微軟正黑體";
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1;
+}
+main {
+    display: block;
+}
+ol,ul {
+    list-style: none;
+}
+blockquote,q {
+    quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button {
+    font-family: "微軟正黑體";
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px;
+}
+select,input {
+    font-family: "微軟正黑體";
+    outline: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+
+//內容
+
+html {
+    width: 100%;
+    height: 100%;
+    background: #e3cc97;
+
+    body {
+        width: 100%;
+        min-width: 1000px;
+        height: 100%;
+        overflow: hidden;
+
+        main {
+            width: 100%;
+            height: 100%;
+
+            article {
+                width: 100%;
+                min-width: 1000px;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .left {
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+
+                    .mainobjectL {
+                        width: 828px;
+                        height: 953px;
+                        background: url(../images/mainObject_left.png) no-repeat center;
+                        background-size: 100%;
+                        position: absolute;
+                        top: 38px;
+                        right: 41px;
+                        animation: lag 0.2s 0.2s linear,  l_side 0.6s 0.2s linear;
+
+                        &.shadow {
+                            width: 828px;
+                            height: 953px;
+                            background: url(../images/mainObject_left.png) no-repeat center;
+                            background-size: 100%;
+                            position: absolute;
+                            top: 38px;
+                            right: 41px;
+                            animation: lag 0.2s 0.2s linear,  l_side 0.6s 0.2s linear ,  gone 0.6s 0.8s ease-in-out;
+                        }
+                    }
+                }
+
+                .right {
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+
+                    .logo {
+                        width: 538px;
+                        height: 234px;
+                        background: url('../images/logo.png') no-repeat;
+                        background-size: 100%;
+                        position: absolute;
+                        top: 16px;
+                        left: -314px;
+                    }
+
+                    .inputBox {
+                        width: 456px;
+                        height: 213px;
+                        display: flex;
+                        padding: 17px 42px;
+                        box-sizing: border-box;
+                        background: #0c1638dc;
+                        border: 3px solid;
+                        border-image: linear-gradient(to top, #f0f0f0 0%, #8f8f8f 49%, #ffffff 50%, #e6e6e6 100%)1;
+                        position: absolute;
+                        top: 252px;
+                        left: -277px;
+
+                        div {
+
+                            label {
+                                display: block;
+                                width: 215px;
+                                height: 46px;
+                                margin: 0 0 10px 0;
+        
+                                &:nth-of-type(2) {
+                                    margin: 0 0 20px 0;
+                                }
+            
+                                input {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(to bottom, #e3e3e3 0%, #f9f9f9 61%);
+                                    border-radius: 5px;
+                                    border: solid 2px #ffffff;
+                                    color: #616169;
+                                    font-size: 20px;
+                                    padding: 17px 15px;
+                                    box-sizing: border-box;
+            
+                                    &::placeholder {
+                                        color: #616169;
+                                    }
+                                }
+                            }
+                        }
+                        
+        
+                        button {
+                            width: 125px;
+                            height: 103px;
+                            background: linear-gradient(to top,#e6203c 2%, #9e0925 50%, #e6203c 100%);
+                            border-radius: 10px;
+                            box-shadow: 0 5px 10px 2px #00000080;
+                            color: #ffffff;
+                            font-size: 29px;
+                            font-weight: bold;
+                            letter-spacing: 8px;
+                            margin-left: 26px;
+                            position: relative;
+                            z-index: 3;
+                            padding: 29px 0 29px 11px;
+
+                            &:hover,&:active,&.active {
+                                background: linear-gradient(to top,#962649 0%,#771c38 100%);
+                            }
+                        }
+
+                        .buttonDeco {
+                            width: 129px;
+                            height: 107px;
+                            background: linear-gradient(to top,#dadada 0%, #999999 30%, #ffffff 50%, #999999 76%, #dadada 93%);
+                            border-radius: 12px;
+                            position: absolute;
+                            top: 15px;
+                            left: 281px;
+                            z-index: 2;
+                        }
+                    }
+
+                    .union {
+                        width: 266px;
+                        height: 47px;
+                        background: url(../images/union.png) no-repeat center;
+                        background-size: 100%;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 92px;
+                    }
+
+                    .mainobjectR {
+                        width: 798px;
+                        height: 941px;
+                        background: url(../images/mainObject_right.png) no-repeat center;
+                        background-size: 100%;
+                        position: absolute;
+                        top: 25px;
+                        left: 7px;
+                        z-index: -1;
+                        animation: lag 0.2s 0.2s linear,  r_side 0.6s 0.2s linear;
+                        
+                        &.shadow {
+                            width: 798px;
+                            height: 941px;
+                            background: url(../images/mainObject_right.png) no-repeat center;
+                            background-size: 100%;
+                            position: absolute;
+                            top: 25px;
+                            left: 7px;
+                            z-index: -1;
+                            animation: lag 0.2s 0.2s linear,  r_side 0.6s 0.2s linear , gone 0.6s 0.8s ease-in-out;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        //背景
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-width: 1000px;
+            height: 100%;
+            background: url('../images/bg.png') no-repeat top center;
+            background-size: 100%;
+            z-index: -999;
+        }
+    }
+}
+@keyframes r_side {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateX(-300%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(0%);
+    }
+}
+@keyframes l_side {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateX(300%);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(0%);
+    }
+}
+@keyframes gone {
+    0% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+@keyframes lag {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
