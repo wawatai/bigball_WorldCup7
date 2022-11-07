@@ -216,8 +216,8 @@ html body main article .right .inputBox button {
   padding: 29px 0 29px 11px;
 }
 html body main article .right .inputBox button:hover, html body main article .right .inputBox button:active, html body main article .right .inputBox button.active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9e0925), to(#e6203c));
-  background: linear-gradient(to bottom, #9e0925 0%, #e6203c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3cc97), color-stop(50%, #7d4a22), to(#e3cc97));
+  background: linear-gradient(to bottom, #e3cc97 0%, #7d4a22 50%, #e3cc97 100%);
 }
 html body main article .right .inputBox .buttonDeco {
   width: 129px;
